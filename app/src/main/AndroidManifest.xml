@@ -13,6 +13,26 @@
         android:theme="@style/Theme.Android_week1"
         tools:targetApi="31">
         <activity
+            android:name=".MainIntents"
+            android:exported="false"
+            android:label="@string/title_activity_main_intents"
+            android:theme="@style/Theme.Android_week1" />
+        <activity
+            android:name=".ScrolledListView"
+            android:exported="false"
+            android:label="@string/title_activity_scrolled_list_view"
+            android:theme="@style/Theme.Android_week1" />
+        <activity
+            android:name=".Mpesa_ListView"
+            android:exported="false"
+            android:label="@string/title_activity_mpesa_list_view"
+            android:theme="@style/Theme.Android_week1" />
+        <activity
+            android:name=".ListView_Ex"
+            android:exported="false"
+            android:label="@string/title_activity_list_view_ex"
+            android:theme="@style/Theme.Android_week1" />
+        <activity
             android:name=".Image_Activity"
             android:exported="false"
             android:label="@string/title_activity_image"

@@ -67,6 +67,8 @@ fun LoginInterface() {
     ) {
         Text(text = "Welcome back,please login", color = Color.Black, fontSize = 15.sp)
 
+        Spacer(modifier = Modifier.height(15.dp))
+
         TextField(
             value = username,
             leadingIcon = { Icon(Icons.Default.Person, contentDescription ="usernameicon" )},

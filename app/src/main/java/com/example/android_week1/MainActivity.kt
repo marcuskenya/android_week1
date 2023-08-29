@@ -2,6 +2,7 @@ package com.example.android_week1
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
@@ -41,11 +42,16 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun name() {
+
+//    val imageView = findViewById<ImageView>(R.id.imageView)
+//    imageView.setImageResource(R.drawable.nike)
+
+
     Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement= Arrangement.Center,
             modifier = Modifier
-                .background(Color.Red)
+
                 .fillMaxSize()
     ){
 
@@ -67,8 +73,41 @@ fun name() {
 
 
         }
+
+
+        var gotoscroll = LocalContext.current
+        Button(onClick = {
+            gotoscroll.startActivity(Intent(gotoscroll,ScrolledListView::class.java)) },
+            shape = RoundedCornerShape(5.dp),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+
+
+            Text(text = "GO TO SCROLL")
+
+
+        }
+        
+        var gotointents = LocalContext.current
+        Button(onClick = {
+            gotointents.startActivity(Intent(gotointents,MainIntents::class.java))
+        },
+            shape = RoundedCornerShape(5.dp),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(text = "GO TO INTENTS")
+        }
 }
 
 
 
     }
+
+//fun <T> findViewById(imageView: Int): Any {
+//return imageView()
+//}
+
+
+
+
+
